@@ -1,9 +1,8 @@
-# controle-lojinha
+# Licativo
 
-Desenvolvi esse app para ajudar no controle de pedidos de compra e venda da loja @loja.sanguinaria. Ideal para organizar movimentações de lojinhas pequenas/ pessoais.
+App para ajudar no controle de pedidos. Ideal para organizar movimentações de lojinhas pequenas/ pessoais.
 <br>
 <br>
-*Necessário criar um projeto no Firebase e configurar conforme o firebase_example.js.*
 
 Desenvolvido com:
   * React Native
