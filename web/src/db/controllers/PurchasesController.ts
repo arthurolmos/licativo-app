@@ -1,7 +1,10 @@
-import { ErrorManager } from "../error";
+import { ErrorManager } from "../../error";
 import { Purchase } from "../models";
+import { CreateOrderInput, UpdateOrderInput } from "../../interfaces";
+import { convertDateToFirebaseTime, priceStringToFloat } from "../../lib";
+import { DateTime } from "luxon";
 
-export const PurchaseController = {
+export const PurchasesController = {
   async index() {
     try {
       return await Purchase.index();
@@ -11,7 +14,7 @@ export const PurchaseController = {
     }
   },
 
-  async findById(id) {
+  async findById(id: string) {
     try {
       return await Purchase.findById(id);
     } catch (err) {
@@ -38,37 +41,52 @@ export const PurchaseController = {
     }
   },
 
-  async create(data) {
+  async create(data: CreateOrderInput) {
     try {
-      const sale = new Purchase(data);
-      await sale.create(data);
+      const purchase = new Purchase(
+        data.name,
+        data.product,
+        data.quantity,
+        data.price,
+        data.orderDate,
+        data.notes,
+        data.type,
+        data.platform,
+        data.isPaid,
+        data.isDelivered,
+        null,
+        data.paymentDate,
+        data.deliveryDate
+      );
+
+      await purchase.create();
     } catch (err) {
       console.log("Error creating PURCHASE", err);
       throw new ErrorManager(err.message);
     }
   },
 
-  async update(id, values) {
+  async update(id: string, values: UpdateOrderInput) {
     try {
-      const sale = await Purchase.findById(id);
-      await sale.update(values);
+      const purchase = await Purchase.findById(id);
+      await purchase.update(values);
     } catch (err) {
       console.log("Error updating PURCHASE", err);
       throw new ErrorManager(err.message);
     }
   },
 
-  async delete(id) {
+  async delete(id: string) {
     try {
-      const sale = await Purchase.findById(id);
-      await sale.delete();
+      const purchase = await Purchase.findById(id);
+      await purchase.delete();
     } catch (err) {
       console.log("Error deleting PURCHASE", err);
       throw new ErrorManager(err.message);
     }
   },
 
-  addObserver(cb) {
+  addObserver(cb: Function) {
     try {
       return Purchase.addObserver(cb);
     } catch (err) {
@@ -77,7 +95,7 @@ export const PurchaseController = {
     }
   },
 
-  addMonthObserver(cb) {
+  addMonthObserver(cb: Function) {
     try {
       return Purchase.addMonthObserver(cb);
     } catch (err) {
@@ -86,7 +104,7 @@ export const PurchaseController = {
     }
   },
 
-  addOpenPurchasesObserver(cb) {
+  addOpenPurchasesObserver(cb: Function) {
     try {
       return Purchase.addOpenPurchasesObserver(cb);
     } catch (err) {
