@@ -258,7 +258,7 @@ export function CreateOrder() {
                 action={pasteFromClipboard}
                 text={`Colar de ${platform}!`}
               />
-              <div>
+              <div style={{ padding: "1rem" }}>
                 Vá para a página do pedido em {platform} <br />
                 Ctrl + A para selecionar a página e Ctrl + C para copiar
                 <br />

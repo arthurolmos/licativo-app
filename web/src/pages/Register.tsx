@@ -115,7 +115,6 @@ const Panel = styled.div`
   align-items: center;
   background-color: white;
   box-shadow: 5px 10px 10px teal;
-  padding: 2rem;
 `;
 
 const Logo = styled.img`
