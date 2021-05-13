@@ -23,8 +23,7 @@ const MenuOption = ({
 };
 
 export function SideMenu(props: Props) {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [open, setOpen] = React.useState(true);
+  const open = true;
 
   return (
     <Container open={open}>
