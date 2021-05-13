@@ -63,7 +63,7 @@ export function EditOrder() {
     }
 
     getOrder();
-  }, []);
+  }, [orderId, orderType, type]);
 
   React.useEffect(() => {
     const data = {

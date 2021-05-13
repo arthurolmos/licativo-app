@@ -6,7 +6,7 @@ import {
 } from "../../lib";
 import { DateTime } from "luxon";
 import { Purchase } from "../models";
-import { CreatePurchaseInput, UpdatePurchaseInput } from "../../interfaces";
+import { UpdatePurchaseInput } from "../../interfaces";
 
 export const PurchasesRepository = {
   async getAllPurchases(converter: any): Promise<Purchase[]> {

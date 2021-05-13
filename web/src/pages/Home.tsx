@@ -5,8 +5,6 @@ import styled from "styled-components";
 interface Props {}
 
 export function Home(props: Props) {
-  const {} = props;
-
   return (
     <PublicBodyContainer>
       <>

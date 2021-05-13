@@ -35,20 +35,20 @@ function AuthProvider({ children }: { children: ReactElement }) {
     await firebase.auth().signInWithEmailAndPassword(email, password);
   }
 
-  async function register(
-    firstName: string,
-    lastName: string,
-    email: string,
-    password: string
-  ) {
-    await firebase.auth().createUserWithEmailAndPassword(email, password);
+  // async function register(
+  //   firstName: string,
+  //   lastName: string,
+  //   email: string,
+  //   password: string
+  // ) {
+  //   await firebase.auth().createUserWithEmailAndPassword(email, password);
 
-    const user = firebase.auth().currentUser;
+  //   const user = firebase.auth().currentUser;
 
-    await user?.updateProfile({
-      displayName: firstName + " " + lastName,
-    });
-  }
+  //   await user?.updateProfile({
+  //     displayName: firstName + " " + lastName,
+  //   });
+  // }
 
   async function logout() {
     await firebase.auth().signOut();

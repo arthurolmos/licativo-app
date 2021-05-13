@@ -11,7 +11,6 @@ import {
   clipFromShopee,
   clipFromLojaIntegrada,
   priceStringToFloat,
-  orderValidations as validations,
 } from "../lib";
 import { CopyOrderInput, CreateOrderInput } from "../interfaces";
 import { SalesController, PurchasesController } from "../db/controllers";

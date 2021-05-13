@@ -5,7 +5,6 @@ import {
   Select,
   TextArea,
   Toggle,
-  DefaultButton,
 } from "../components";
 import styled from "styled-components";
 import { SalesController, PurchasesController } from "../db/controllers";
@@ -15,8 +14,6 @@ import { useParams, useHistory } from "react-router";
 type Order = Partial<Sale & Purchase>;
 
 export function ViewOrder() {
-  // const { order }: { order: Order }
-
   const history = useHistory();
 
   const {
@@ -64,7 +61,7 @@ export function ViewOrder() {
     }
 
     getOrder();
-  }, []);
+  }, [orderId, orderType, type]);
 
   React.useEffect(() => {
     const data = {

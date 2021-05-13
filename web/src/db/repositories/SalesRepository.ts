@@ -5,7 +5,7 @@ import {
   getArrayFromSnapshot,
 } from "../../lib";
 import { DateTime } from "luxon";
-import { CreateSaleInput, UpdateSaleInput } from "../../interfaces";
+import { UpdateSaleInput } from "../../interfaces";
 import { Sale } from "../models";
 
 export const SalesRepository = {

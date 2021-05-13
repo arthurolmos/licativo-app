@@ -1,8 +1,6 @@
 import { ErrorManager } from "../../error";
-import { convertDateToFirebaseTime, priceStringToFloat } from "../../lib";
 import { CreateOrderInput, UpdateOrderInput } from "../../interfaces";
 import { Sale } from "../models";
-import { DateTime } from "luxon";
 
 export const SalesController = {
   async index() {

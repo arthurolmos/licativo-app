@@ -23,8 +23,6 @@ const MenuOption = ({
 };
 
 export function SideMenu(props: Props) {
-  const {} = props;
-
   const [open, setOpen] = React.useState(true);
 
   return (

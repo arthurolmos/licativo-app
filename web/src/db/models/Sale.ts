@@ -1,6 +1,5 @@
 import { SalesRepository as repository } from "../repositories";
-import { UpdateOrderInput, UpdateSaleInput } from "../../interfaces";
-import { priceStringToFloat } from "../../lib";
+import { UpdateOrderInput } from "../../interfaces";
 
 export class Sale {
   constructor(
