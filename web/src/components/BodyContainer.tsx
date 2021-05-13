@@ -68,7 +68,9 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: 2rem;
+  overflow: hidden;
+  max-width: 100%;
 `;
 
 const Content = styled.div`
@@ -77,6 +79,7 @@ const Content = styled.div`
   align-items: center;
   flex-direction: column;
   margin-top: 60px;
+  max-width: 100%;
 `;
 
 const Title = styled.div`
@@ -95,6 +98,7 @@ const Body = styled.div`
   box-shadow: 0 0 20px 0 teal;
   justify-content: center;
   align-items: center;
+  max-width: 100%;
 `;
 
 const BackButton = styled.div`

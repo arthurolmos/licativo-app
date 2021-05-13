@@ -64,6 +64,7 @@ const Container = styled.div`
   align-items: center;
   flex-direction: column;
   overflow: auto;
+  max-width: 100%;
 `;
 
 const PanelItem = styled.div`
@@ -72,7 +73,7 @@ const PanelItem = styled.div`
   margin: 1rem;
   padding: 1rem;
   box-shadow: 0 0 8px teal;
-  width: 80%;
+  width: 100%;
 `;
 
 const Header = styled.div`
